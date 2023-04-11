@@ -110,9 +110,26 @@
 
 <a href="http://beian.miit.gov.cn/" target="_blank"> 浙ICP备2021033483号-4</a>
 
-  <span id="runtime_span"></span><script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=newDate("09/30/2020 15:10:00");Y=newDate();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
-a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
-runtime_span.innerHTML="已运行: "+A+"天"}show_runtime();</script>
+博客已稳定运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN> <SCRIPT language=javascript>function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("8/21/2017 23:32:13");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=Math.floor(e_hrsold);
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=Math.floor((e_hrsold-hrsold)*60);
+seconds=Math.floor((e_minsold-minsold)*60);
+span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
+}
+show_date_time();</script>
 
+
+</div><!-- .site-info -->
 
 </html>
